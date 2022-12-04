@@ -17,13 +17,22 @@ const galleryEl = document.querySelector('.gallery');
 
 const listOfImages = images
   .map(
-    ({ url, alt }) => `<li class="gallery__item">
+    ({ url, alt }) => `<li style="display: flex; list-style: none;">
 <img
   src='${url}'
   alt='${url}'
+  width = '400px'
+
 />
 </li>`,
   )
   .join('');
 
 galleryEl.insertAdjacentHTML('beforeend', listOfImages);
+
+galleryEl.style.padding = 0;
+galleryEl.style.margin = 0;
+galleryEl.style.display = 'flex';
+galleryEl.style.flexWrap = 'wrap';
+galleryEl.style.justifyContent = 'center';
+galleryEl.style.gap = '30px';
