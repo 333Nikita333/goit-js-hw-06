@@ -1,3 +1,5 @@
+'use strict';
+
 const refs = {
   inputEl: document.querySelector('input'),
   btnCreateBoxEl: document.querySelector('button[data-create]'),

@@ -1,5 +1,6 @@
+'use strict';
+
 const formEl = document.querySelector('.login-form');
-formEl.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -15,3 +16,5 @@ function handleSubmit(event) {
   console.log(userInfo);
   event.currentTarget.reset();
 }
+
+formEl.addEventListener('submit', handleSubmit);

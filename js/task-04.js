@@ -1,3 +1,5 @@
+'use strict';
+
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
 const incrementBtn = document.querySelector('button[data-action="increment"]');
 const valueEl = document.querySelector('#value');
@@ -11,12 +13,12 @@ const counterValue = {
   },
 };
 
-decrementBtn.addEventListener('click', function () {
+decrementBtn.addEventListener('click', () => {
   counterValue.decrement();
   valueEl.textContent = counterValue.value;
 });
 
-incrementBtn.addEventListener('click', function () {
+incrementBtn.addEventListener('click', () => {
   counterValue.increment();
   valueEl.textContent = counterValue.value;
 });

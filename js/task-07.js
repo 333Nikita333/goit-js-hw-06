@@ -1,3 +1,5 @@
+'use strict';
+
 const inputEl = document.querySelector('#font-size-control');
 const textEl = document.querySelector('#text');
 

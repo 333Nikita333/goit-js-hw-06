@@ -1,3 +1,5 @@
+'use strict';
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -20,7 +22,7 @@ const listOfImages = images
     ({ url, alt }) => `<li style="display: flex; list-style: none;">
 <img
   src='${url}'
-  alt='${url}'
+  alt='${alt}'
   width = '400px'
 
 />
