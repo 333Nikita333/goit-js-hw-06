@@ -1,17 +1,16 @@
-'use strict';
-
-const inputEl = document.querySelector('#validation-input');
-
-inputEl.addEventListener('blur', event => {
-  if (event.target.value.length == inputEl.getAttribute('data-length')) {
-    inputEl.classList.add('valid');
-    if (inputEl.classList.contains('invalid')) {
-      inputEl.classList.remove('invalid');
+"use strict";
+const inputValidationEl = document.querySelector('#validation-input');
+inputValidationEl.addEventListener('blur', event => {
+    const inputTarget = event.target;
+    const inputValueLength = inputTarget.value.length;
+    const dataLength = inputValidationEl.getAttribute('data-length');
+    if (inputValueLength === Number(dataLength)) {
+        inputValidationEl.classList.add('valid');
+        inputValidationEl.classList.remove('invalid');
     }
-  } else {
-    if (inputEl.classList.contains('valid')) {
-      inputEl.classList.remove('valid');
+    else {
+        inputValidationEl.classList.add('invalid');
+        inputValidationEl.classList.remove('valid');
     }
-    inputEl.classList.add('invalid');
-  }
 });
+//# sourceMappingURL=task-06.js.map

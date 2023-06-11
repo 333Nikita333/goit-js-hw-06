@@ -1,8 +1,8 @@
-'use strict';
-
-const inputEl = document.querySelector('#font-size-control');
+"use strict";
+const inputSizeEl = document.querySelector('#font-size-control');
 const textEl = document.querySelector('#text');
-
-inputEl.addEventListener('input', event => {
-  textEl.style.fontSize = event.target.value + 'px';
+inputSizeEl.addEventListener('input', event => {
+    const target = event.target;
+    textEl.style.fontSize = target.value + 'px';
 });
+//# sourceMappingURL=task-07.js.map
